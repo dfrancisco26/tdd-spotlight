@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { myFunction, addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply } from '../functions.js';
+import { myFunction, addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -49,4 +49,12 @@ test('multiply then divide', (expect) => {
     const actual = divideThenMultiply(24, 2, 2);
 
     expect.equal(actual, expected, 'it did');
+});
+
+test('return array', (expect) => {
+    const expected = [8, 4, 5];
+
+    const actual = returnAsAnArray(8, 4, 5);
+
+    expect.deepEqual(actual, expected, 'you\'re smart');
 });
