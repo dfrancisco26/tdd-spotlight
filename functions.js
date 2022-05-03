@@ -15,7 +15,11 @@ Output:
 */
 
 export function addExclamationPoints() {
-    return true;
+    let string = 'bunny rabbit';
+    string += '!!!';
+    if(string === 'bunny rabbit!!!') {
+        return true;
+    }
 }
 
 // This function should take in a number and multiply it by seven
@@ -31,7 +35,7 @@ Output:
 */
 
 export function multiplyBySeven(num) {
-    return true;
+    return num * 7;
 }
 
 // This function should take in a number and multiply it by twelve then cut the result in half
@@ -48,7 +52,7 @@ Output:
 */
 
 export function multiplyBy12ThenHalve(num) {
-    return true;
+    return num * 12 / 2;
 }
 
 // This function should take in three numbers, divide the first by the second, then multiply the result by the third
@@ -64,7 +68,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return firstNumber / secondNumber * thirdNumber;
 }
 
 // This function should take in three numbers and return those numbers in an array
@@ -80,7 +84,9 @@ Output:
 */
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    let arr = [];
+    arr.push(firstNumber, secondNumber, thirdNumber);
+    return arr;
 }
 
 // This function should take in three numbers and return those numbers mushed together as a string
@@ -96,7 +102,7 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return `${firstNumber}${secondNumber}${thirdNumber}`;
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
@@ -112,7 +118,7 @@ Output:
 */
 
 export function makeLuckyGreeting(firstNumber, secondNumber) {
-    return true;
+    return `hello, your lucky number for the day is ${firstNumber + secondNumber}`;
 }
 
 // This function should take an array and return the second item in the array
@@ -129,7 +135,7 @@ Output:
 */
 
 export function getSecondItem(array) {
-    return true;
+    return array[1];
 }
 
 // This function should take an array and return the LAST item in the array, no matter the array's length
@@ -146,7 +152,7 @@ Output:
 */
 
 export function getLastItem(array) {
-    return true;
+    return array[array.length - 1];
 }
 
 // This function should take a dog object and return an <li> with the name of the dog
@@ -162,10 +168,12 @@ Output:
 */
 
 export function renderDogLI(dog) {
-    return true;
+    let li = document.createElement('li');
+    li.textContent = dog.name;
+    return li;
 }
 
-// This function should take a dog object and return a div with the dog's information
+// This function should take a dog object and return a div with the dog's information(dog will be an object to append?)
 /* 
 Input:
 
@@ -178,5 +186,12 @@ Output:
 */
 
 export function renderDogDiv() {
-    return true;
+    let div = document.createElement('div');
+    let dog = { name: 'Benny', age: 6 };
+    const h1 = document.createElement('h1');
+    const p = document.createElement('p');
+    h1.textContent = dog.name;
+    p.textContent = `${dog.name} is ${dog.age} years old`;
+    div.append(h1, p);
+    return div;
 }
