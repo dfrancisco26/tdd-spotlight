@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { myFunction, addExclamationPoints, multiplyBySeven } from '../functions.js';
+import { myFunction, addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -33,4 +33,12 @@ test('multiply by seven', (expect) => {
     const actual = multiplyBySeven(1);
 
     expect.equal(actual, expected);
+});
+
+test('multiply by 12 then half', (expect) => {
+    const expected = 24;
+
+    const actual = multiplyBy12ThenHalve(4);
+
+    expect.equal(actual, expected, '24');
 });
