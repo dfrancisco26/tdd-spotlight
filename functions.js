@@ -168,7 +168,9 @@ Output:
 */
 
 export function renderDogLI(dog) {
-    return true;
+    let li = document.createElement('li');
+    li.textContent = dog.name;
+    return li;
 }
 
 // This function should take a dog object and return a div with the dog's information(dog will be an object to append?)
