@@ -171,7 +171,7 @@ export function renderDogLI(dog) {
     return true;
 }
 
-// This function should take a dog object and return a div with the dog's information
+// This function should take a dog object and return a div with the dog's information(dog will be an object to append?)
 /* 
 Input:
 
@@ -184,5 +184,12 @@ Output:
 */
 
 export function renderDogDiv() {
-    return true;
+    let div = document.createElement('div');
+    let dog = { name: 'Benny', age: 6 };
+    const h1 = document.createElement('h1');
+    const p = document.createElement('p');
+    h1.textContent = dog.name;
+    p.textContent = `${dog.name} is ${dog.age} years old`;
+    div.append(h1, p);
+    return div;
 }

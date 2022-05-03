@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { myFunction, addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem } from '../functions.js';
+import { myFunction, addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem, renderDogDiv } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -81,4 +81,12 @@ test('return 2nd index', (expect) => {
     const actual = getSecondItem(['woo', 'kiwi', 'lol', 'no']);
 
     expect.equal(actual, expected, 'yup');
+});
+
+test('return div', (expect) => {
+    const expected = `<div><h1>Benny</h1><p>Benny is 6 years old</p></div>`;
+
+    const actual = renderDogDiv();
+
+    expect.equal(actual.outerHTML, expected, 'LESSSGETITTT');
 });
